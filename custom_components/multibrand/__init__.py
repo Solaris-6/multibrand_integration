@@ -7,8 +7,8 @@ from homeassistant.const import CONF_HOST
 
 _LOGGER = logging.getLogger(__name__)
 
-DOMAIN = "multibrand"
-BRANDS = ["shelly", "sonoff", "tuya", "bticino", "vimar"]
+# Import constants
+from .const import DOMAIN, BRANDS
 
 # Import all brand product catalogs
 from .shelly import SHELLY_PRODUCTS
@@ -89,9 +89,21 @@ async def async_setup(hass, config):
     return True
 
 
-async def async_unload_platforms(hass, platforms):
-    """Unload platforms."""
-    unload_ok = True
-    for platform in platforms:
-        unload_ok = await hass.config_entries.async_unload_platform(hass, DOMAIN, platform) and unload_ok
+async def async_setup_entry(hass, entry):
+    """Set up multibrand from a config entry."""
+    hass.data.setdefault(DOMAIN, {})
+    hass.data[DOMAIN].setdefault("devices", {})
+    hass.data[DOMAIN]["all_products"] = ALL_PRODUCTS
+
+    # Forward entry setup to platforms
+    await hass.config_entries.async_forward_entry_setups(entry, ["sensor", "switch", "device_tracker"])
+
+    return True
+
+
+async def async_unload_entry(hass, entry):
+    """Unload a config entry."""
+    unload_ok = await hass.config_entries.async_unload_platforms(entry, ["sensor", "switch", "device_tracker"])
+    if unload_ok:
+        hass.data[DOMAIN].pop(entry.entry_id, None)
     return unload_ok
