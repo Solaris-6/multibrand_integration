@@ -1,0 +1,13 @@
+{
+  "domain": "multibrand",
+  "name": "Multibrand Integration",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/Solaris-6/multibrand_integration",
+  "issue_tracker": "https://github.com/Solaris-6/multibrand_integration/issues",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homeassistant": "2024.11.0",
+  "version": "1.0.0"
+}
