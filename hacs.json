@@ -1,0 +1,12 @@
+{
+  "name": "Multibrand Integration",
+  "custom_interval": 3600,
+  "content_in_root": true,
+  "zip_release": true,
+  "manifest": "manifest.json",
+  "changelog": "README.md",
+  "domain": "multibrand",
+  "render_readme": true,
+  "filename": "custom_components/multibrand",
+  "homeassistant": "2024.11.0"
+}
