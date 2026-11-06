@@ -15,6 +15,5 @@ BRAND_SPECIFIC = {
 
 # Import complete product catalog
 from .products_part1 import SHELLY_PRODUCTS
-from .products_part2 import SHELLY_PRODUCTS
 
 __all__ = ["SHELLY_PRODUCTS"]
