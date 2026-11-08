@@ -1,4 +1,5 @@
 """Shelly integration for Home Assistant - Multibrand support."""
+
 from homeassistant.const import CONF_HOST
 
 NAME = "Shelly"
@@ -13,7 +14,7 @@ BRAND_SPECIFIC = {
     "model_prefix": "SHELLY",
 }
 
-# Import complete product catalog
-from .products_part1 import SHELLY_PRODUCTS
+# Import complete product catalog (single file)
+from .products import SHELLY_PRODUCTS
 
 __all__ = ["SHELLY_PRODUCTS"]

@@ -1,4 +1,5 @@
 """Sonoff integration for Home Assistant - Multibrand support."""
+
 from homeassistant.const import CONF_HOST
 
 NAME = "Sonoff"
@@ -12,8 +13,7 @@ BRAND_SPECIFIC = {
     "default_region": "eu",
 }
 
-# Import complete product catalog
-from .products_part1 import SONOFF_PRODUCTS
-from .products_part2 import SONOFF_PRODUCTS
+# Import complete product catalog (single file)
+from .products import SONOFF_PRODUCTS
 
 __all__ = ["SONOFF_PRODUCTS"]

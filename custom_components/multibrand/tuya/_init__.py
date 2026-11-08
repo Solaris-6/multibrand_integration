@@ -1,4 +1,5 @@
 """Tuya integration for Home Assistant - Multibrand support."""
+
 from homeassistant.const import CONF_HOST
 
 NAME = "Tuya"
@@ -12,8 +13,7 @@ BRAND_SPECIFIC = {
     "mcu_protocol": "https://developer.tuya.com",
 }
 
-# Import complete product catalog
-from .products_part1 import TUYA_PRODUCTS
-from .products_part2 import TUYA_PRODUCTS
+# Import complete product catalog (single file)
+from .products import TUYA_PRODUCTS
 
 __all__ = ["TUYA_PRODUCTS"]

@@ -1,21 +1,7 @@
-# Vimar smart product catalog
+# Vimar smart product catalog - Unified export
 VIMAR_PRODUCTS = {
-    'vimar_mhome': {'name': 'Vimar MyHome', 'type': 'smart_hub', 'port': 80, 'api': '/rpc', 'devices': True},
-    'vimar_xsmart': {'name': 'Vimar XSmart', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 1},
-    'vimar_wismart': {'name': 'Vimar WiSmart', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 1},
-    'vimar_easygest': {'name': 'Vimar EasyGest', 'type': 'smart_remote', 'port': 80, 'api': '/rpc', 'channels': 4},
-    'vimar_intu': {'name': 'Vimar InTu', 'type': 'smart_hub', 'port': 80, 'api': '/rpc', 'devices': True},
-    'vimar_home_fixtures': {'name': 'Vimar Home Fixtures', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 1},
-    'vimar_power_brics': {'name': 'Vimar Power Brics', 'type': 'smart_plug', 'port': 80, 'api': '/rpc', 'power': True, 'energy': True},
-    'vimar_captury': {'name': 'Vimar Captury', 'type': 'smart_sensor', 'port': 80, 'api': '/rpc', 'door': True, 'contact': True},
-    'vimar_vario': {'name': 'Vimar Vario', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 1},
-    'vimar_xsmart2': {'name': 'Vimar XSmart 2', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 2},
-    'vimar_wismart2': {'name': 'Vimar WiSmart 2', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 2},
-    'vimar_mhome_s2': {'name': 'Vimar MyHome S2', 'type': 'smart_hub', 'port': 80, 'api': '/rpc', 'devices': True},
-    'vimar_xsmart3': {'name': 'Vimar XSmart 3', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 3},
-    'vimar_intu2': {'name': 'Vimar InTu 2', 'type': 'smart_hub', 'port': 80, 'api': '/rpc', 'devices': True},
-    'vimar_captury2': {'name': 'Vimar Captury 2', 'type': 'smart_sensor', 'port': 80, 'api': '/rpc', 'door': True, 'contact': True},
-    'vimar_power_brics2': {'name': 'Vimar Power Brics 2', 'type': 'smart_plug', 'port': 80, 'api': '/rpc', 'power': True, 'energy': True},
-    'vimar_easygest2': {'name': 'Vimar EasyGest 2', 'type': 'smart_remote', 'port': 80, 'api': '/rpc', 'channels': 8},
-    'vimar_vario2': {'name': 'Vimar Vario 2', 'type': 'smart_switch', 'port': 80, 'api': '/rpc', 'channels': 2},
+    'vimar_switch': {'name': 'Vimar Switch', 'type': 'smart_switch', 'port': 80, 'api': '/', 'power': True},
+    'vimar_sensor': {'name': 'Vimar Sensor', 'type': 'smart_sensor', 'port': 80, 'api': '/data', 'temperature': True},
+    'vimar_thermostat': {'name': 'Vimar Thermostat', 'type': 'smart_thermostat', 'port': 80, 'api': '/data', 'temp': True, 'humidity': True},
+    'vimar_gateway': {'name': 'Vimar Gateway', 'type': 'smart_switch', 'port': 80, 'api': '/', 'power': True},
 }

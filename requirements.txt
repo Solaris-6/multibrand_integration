@@ -4,6 +4,7 @@
 # Core dependencies (provided by Home Assistant)
 aiohttp>=3.9.5,<4.0.0
 voluptuous>=0.14.2,<0.15.0
+homeassistant>=2024.11.0
 
 # Device communication libraries
 shellyplus>=0.16.0,<0.17.0  # Shelly RPC API
