@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "multibrand-integration"
+version = "2.0.0"
+description = "Multibrand Integration for Home Assistant - Support Shelly, Sonoff, Tuya, Bticino, Vimar devices"
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    # Core dependencies (provided by Home Assistant)
+    "aiohttp>=3.9.5,<4.0.0",
+    "voluptuous>=0.14.2,<0.15.0",
+    
+    # Device communication libraries
+    "shellyplus>=0.16.0,<0.17.0",
+    "sonoff-api>=1.2.0,<2.0.0",
+    "tuya-protocol>=3.5.0,<4.0.0",
+    
+    # Network discovery and utilities
+    "zeroconf>=0.138.0,<0.139.0",
+    "netifaces>=0.11.0,<0.12.0",
+    
+    # Async HTTP client (provided by Home Assistant)
+    "aiohttp-retry>=2.8.0,<3.0.0",
+    
+    # Logging and debugging
+    "python-json-logger>=2.0.7,<3.0.0",
+    
+    # Type hints for Python 3.11+
+    "typing_extensions>=4.9.0,<5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0,<9.0.0",
+    "pytest-asyncio>=0.23.5,<1.0.0",
+    "black>=24.3.0,<25.0.0",
+    "flake8>=7.0.0,<8.0.0",
+    "mypy>=1.9.0,<2.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

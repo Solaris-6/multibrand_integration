@@ -1,0 +1,24 @@
+# Multibrand Integration - Requirements
+# Home Assistant 2024.11+ compatible
+
+# Core dependencies (provided by Home Assistant)
+aiohttp>=3.9.5,<4.0.0
+voluptuous>=0.14.2,<0.15.0
+
+# Device communication libraries
+shellyplus>=0.16.0,<0.17.0  # Shelly RPC API
+sonoff-api>=1.2.0,<2.0.0   # Sonoff eWeLink local API
+tuya-protocol>=3.5.0,<4.0.0  # Tuya Smart Life protocol
+
+# Network discovery and utilities
+zeroconf>=0.138.0,<0.139.0  # mDNS/DNS-SD discovery
+netifaces>=0.11.0,<0.12.0  # Network interface detection
+
+# Async HTTP client (provided by Home Assistant)
+aiohttp-retry>=2.8.0,<3.0.0
+
+# Logging and debugging
+python-json-logger>=2.0.7,<3.0.0
+
+# Type hints for Python 3.11+
+typing_extensions>=4.9.0,<5.0.0
