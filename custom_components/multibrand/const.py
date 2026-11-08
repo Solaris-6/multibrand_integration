@@ -1,3 +1,2 @@
-"""Constants for the Multibrand integration."""
 DOMAIN = "multibrand"
-BRANDS = ["shelly", "sonoff", "tuya", "bticino", "vimar"]
+PLATFORMS = ["sensor", "switch", "device_tracker"]
